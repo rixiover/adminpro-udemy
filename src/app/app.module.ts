@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms'
 
 // Modulos
 import { PagesModule } from './pages/pages.module';
@@ -16,6 +17,7 @@ import { RegisterComponent } from './login/register.component';
 // servicios
 import { SharedService } from './services/shared.service';
 import { SidebarService } from './services/sidebar.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { SidebarService } from './services/sidebar.service';
     BrowserModule,
     PagesModule,
     AppRoutingModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [
     SharedService,
