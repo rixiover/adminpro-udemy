@@ -7,17 +7,16 @@ import { FormsModule } from '@angular/forms'
 
 // Modulos
 import { PagesModule } from './pages/pages.module';
+import { CommonModule } from '@angular/common';
 
 // Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 
-
 // servicios
-import { SharedService } from './services/shared.service';
-import { SidebarService } from './services/sidebar.service';
-import { CommonModule } from '@angular/common';
+import { ServiceModule } from './services/service.module';
+
 
 @NgModule({
   declarations: [
@@ -30,11 +29,10 @@ import { CommonModule } from '@angular/common';
     PagesModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    ServiceModule
   ],
   providers: [
-    SharedService,
-    SidebarService
   ],
   bootstrap: [AppComponent]
 })
